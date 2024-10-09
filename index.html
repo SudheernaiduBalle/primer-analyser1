@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Analysis Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h3, h4 {
+            color: #2F4F4F;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #2F4F4F;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4682B4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Primer Analysis Tool</h3>
+        <label for="primerSeq">Enter Forward and Reverse Primers (comma-separated):</label>
+        <input type="text" id="primerSeq" placeholder="Forward Primer, Reverse Primer">
+
+        <label for="targetSeq">Enter Target Sequence (Optional):</label>
+        <textarea id="targetSeq" rows="4" placeholder="Optional sequence for primer binding analysis"></textarea>
+
+        <button onclick="assessPrimers()">Analyze Primers</button>
+        <button onclick="reloadPage()">Reload</button>
+
+        <div id="results"></div>
+    </div>
+
+    <script src="primerAnalysis.js"></script>
+</body>
+</html>
